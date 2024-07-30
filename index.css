@@ -1,0 +1,287 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    font-family: Arial, sans-serif;
+}
+
+.main {
+    background: linear-gradient(to right, #f7e9a8, #f58cee);
+}
+
+nav,
+.nav-links {
+    display: flex;
+}
+
+nav {
+    align-items: center;
+    height: 40px;
+    background-color: #ff6666;
+}
+
+.nav-links {
+    margin-left: 200px;
+    gap: 5rem;
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+.child1 {
+    margin-top: 100px;
+    width: 50%;
+    height: 700px;
+    text-align: left;
+    margin-left: 100px;
+    font-family: sans-serif;
+}
+
+.parent {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h1 {
+    text-align: left;
+    margin-left: 0px;
+}
+
+.image1 {
+    width: 50%;
+    height: 700px;
+    display: block;
+}
+
+input {
+    background-color: #ff6666;
+    height: 30px;
+    width: 200px;
+    border: none;
+    color: white;
+    font-family: sans-serif;
+}
+
+.lorem {
+    margin-top: 100px;
+    width: 50%;
+    height: 700px;
+    text-align: left;
+    margin-left: 100px;
+    font-family: sans-serif;
+}
+
+.parent1 {
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+}
+
+.images {
+    width: 200px;
+    height: 400px;
+}
+
+.img {
+    width: 200px;
+    height: 400px;
+}
+
+.child2 {
+    width: 60%;
+    height: 200px;
+    padding-left: 20px;
+    font-family: "bodoni MT";
+    background-color: #ff6666;
+}
+
+#btn {
+    background-color: #ff6666;
+    border: none;
+}
+
+.arrow-click {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.click {
+    margin-right: 10px;
+}
+
+.arrow {
+    width: 30px;
+    height: auto;
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        margin-left: 0;
+        background-color: #ff6666;
+        width: 100%;
+        text-align: center;
+        display: none;
+    }
+
+    #hamburger {
+        display: block;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    #nav-toggle:checked+.nav-links {
+        display: flex;
+    }
+
+    .parent,
+    .parent1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .child1,
+    .image1,
+    .lorem {
+        margin-left: 0;
+        width: 90%;
+        height: auto;
+        text-align: center;
+    }
+
+    .image1 img,
+    .images img,
+    .img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .child1,
+    .lorem {
+        margin-top: 20px;
+    }
+
+    .child1 h1,
+    .lorem h1 {
+        font-size: 1.5em;
+    }
+
+    .nav-links img {
+        margin-left: auto;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 600px) and (max-width: 992px) {
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-left: 0;
+    }
+
+    .parent,
+    .parent1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .child1,
+    .image1,
+    .lorem {
+        margin-left: 0;
+        width: 80%;
+        height: auto;
+        text-align: center;
+    }
+
+    .image1 img,
+    .images img,
+    .img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .child1,
+    .lorem {
+        margin-top: 20px;
+    }
+
+    .child1 h1,
+    .lorem h1 {
+        font-size: 2em;
+    }
+
+    #hamburger {
+        display: none;
+    }
+}
+
+@media (min-width: 993px) {
+    .nav-links {
+        flex-direction: row;
+        gap: 5rem;
+    }
+
+    .parent {
+        flex-direction: row;
+    }
+
+    .child1 h1 {
+        font-size: 2.5em;
+    }
+
+    .image1 img {
+        width: 100%;
+        height: 700px;
+    }
+
+    .images img,
+    .img img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .img img {
+        height: 400px;
+    }
+
+    #hamburger {
+        display: none;
+    }
+}
+
+/* Hamburger menu styles */
+#nav-toggle {
+    display: none;
+}
+
+#hamburger {
+    display: none;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+#nav-toggle:checked+.nav-links {
+    display: flex;
+}
